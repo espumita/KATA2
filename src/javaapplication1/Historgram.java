@@ -2,16 +2,16 @@ package javaapplication1;
 
 import java.util.HashMap;
 
-public class Historgram {
+public class Historgram <T> {
 
-    private final int[] array;
+    private final T[] array;
 
-    public Historgram(int[] array) {
+    public Historgram(T[] array) {
         this.array = array;
     }
 
-    public HashMap<Integer, Integer> getHisto() {
-        HashMap<Integer, Integer> histo = new HashMap<>();
+    public HashMap<T, Integer> getHisto() {
+        HashMap<T, Integer> histo = new HashMap<>();
         for (int i = 0; i < array.length; i++) {
             if (!histo.containsKey(array[i])) {
                 histo.put(array[i], 0);
